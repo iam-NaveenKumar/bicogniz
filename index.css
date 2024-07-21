@@ -9,10 +9,12 @@
   list-style: none;
   text-decoration: none;
 }
+
 :root {
   --main-color: #004aac;
   --bg-color: rgba(255, 255, 255, 0.114);
 }
+
 body {
   min-height: 100vh;
 }
@@ -103,27 +105,30 @@ body {
   transition: 0.5s;
 }
 
-.nav-item:hover {
-  .nav-link::before {
-    transform: scale(1);
-  }
-  .nav-link {
-    color: var(--main-color);
-    transition: 0.5s;
-  }
+.nav-item:hover .nav-link::before {
+  transform: scale(1);
 }
+
+.nav-item:hover .nav-link {
+  color: var(--main-color);
+  transition: 0.5s;
+}
+
 @media only screen and (max-width: 768px) {
   .nav-menu {
+    margin: auto 10%;
     position: fixed;
     left: -100%;
     top: 8rem;
     flex-direction: column;
-    background-color: var(--bg-color);
-    width: 100%;
+    background-color: rgba(0, 0, 0, 0.499);
+    width: 80%;
     border-radius: 10px;
     text-align: center;
     transition: 0.3s;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+  .nav-link {
     color: white;
   }
 
@@ -205,6 +210,19 @@ section video {
   margin-top: 1rem;
 }
 
+@media only screen and (max-width: 768px) {
+  .main-content .texts {
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .sub-texts {
+    width: 70%;
+    font-size: 1rem;
+    line-height: 20px;
+  }
+}
+
 .btn {
   font-size: 1.5rem;
   color: white;
@@ -214,7 +232,7 @@ section video {
   width: 15rem;
   height: 4rem;
   right: 42%;
-  bottom:50px;
+  bottom: 50px;
   border-radius: 20px;
   background-color: var(--bg-color);
   box-shadow: 0px 0px 2px white;
@@ -226,6 +244,15 @@ section video {
   color: var(--main-color);
   background-color: rgba(255, 255, 255, 0.727);
   transition: 1s linear;
+}
+
+@media only screen and (max-width: 768px) {
+  .btn {
+    right: 30%;
+    width: 12rem;
+    height: 3rem;
+    font-size: 1.2rem;
+  }
 }
 
 footer {
